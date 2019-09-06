@@ -1,0 +1,10 @@
+<%= form_with(model: @post,url: posts_path, local:true) do |form| %>
+  <%= image_tag(@post.images.url) if @post.images && @post.images.url %>
+  <%= form.hidden_field :images_cache %>
+  <%= form.submit "Post"%>
+<% end %>
+
+<%= form_with(model:@post, url:new_post_path, local:true, method:"get") do |form|%>
+  <%= form.hidden_field:images_cache %>
+  <%= form.submit "Return", name:"back" %>
+<% end %>

@@ -1,0 +1,20 @@
+<div class="super">
+<p id="notice"><%= notice %></p>
+<div class="p-3 mb-2 bg-white text-dark">
+<p>
+  <strong><%= @post.user.first_name %> <%= @post.user.last_name %></strong>
+</p>
+<p>
+  <%= @post.texts %>
+</p>
+
+<p>
+<% if @post.images.url %>
+  <%= image_tag @post.images.url %>
+  <% end %>
+</p>
+
+<a><%= link_to 'Edit', edit_post_path(@post) %></a>
+<a><%= link_to 'Back', posts_path %></a>
+<div>
+</div>

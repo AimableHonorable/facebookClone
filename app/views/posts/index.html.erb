@@ -1,0 +1,39 @@
+
+<div class="super">
+  <p id="notice"><%= notice %></p>
+  <div =>
+  <p>
+  <button class="btn btn-success">
+  <a><%= link_to 'New Post', new_post_path %><a>
+  </button>
+  </p>
+
+    <% @posts.each do |post| %>
+      <div class="p-3 mb-2 bg-white text-dark">
+      <p>
+      <strong><%= post.user.first_name %> <%= post.user.last_name %><strong>
+      </p>
+
+      <p>
+      <%= post.texts %>
+      </p>
+
+      <p>
+      <% if post.images.url %>
+      <%= image_tag post.images.url %>
+      <% end %>
+      </p>
+
+      <p>
+      <a><%= link_to 'Show', post %></a>
+      <% if logged_in? %>
+        <% if current_user.id == post.user_id %>
+          <a><%= link_to 'Edit', edit_post_path(post) %></a>
+          <a><%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' } %></a>
+        <% end %>
+      <% end %>
+      </p>
+      </div>
+    <% end %>
+  </div>
+</div>

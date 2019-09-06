@@ -1,0 +1,80 @@
+
+.navbar-default{
+  background-color: #3b5998;
+  color: white;
+}
+.navbar-default a{
+  color: white;
+}
+.navbar-nav a{
+    color: white;
+}
+.navbar-header{
+  height: 60px;
+}
+.main-form{
+  width: 400px;
+  margin: 100px auto;
+}
+.form-group{
+  width: 400px;
+  margin: auto;
+}
+.login{
+  width: 150px;
+  border-radius: 15px;
+  font-weight: bold;
+}
+.login:hover{
+  background-color: #3b5998;
+  color: white;
+}
+.super{
+  width: 800px;
+  margin: 20px auto;
+}
+img{
+  max-width: 780px;
+}
+.text-dark{
+  border-radius: 10px;
+  
+}
+.signup{
+  background-color: green;
+}
+.register{
+  width: 400px;
+  float: right;
+  margin: 20px;
+  margin-right: 100px;
+}
+.first{
+  width: 500px;
+  height: 400px;
+  background-color: aliceblue;
+  float: left;
+  margin-top: 100px;
+  margin-left: 100px;
+  padding: 10px;
+}
+.newpost{
+  width: 600px;
+  background-color: white;
+  border-radius: 15px;
+  margin: 100px auto;
+  padding: 10px;
+}
+.btn-success a{
+  color: white;
+}
+.btn-success a:hover{
+  color: white;
+  text-decoration: none;
+  background-color: transparent;
+}
+a:hover{
+  color: white;
+  text-decoration: none;
+  background-color: transparent;
+}
