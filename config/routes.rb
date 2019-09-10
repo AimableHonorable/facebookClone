@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :posts
-  get 'sessions/new'
+  root "users#new"
   resources :sessions, only: [:new, :create, :destroy]
   resources :users
 end
