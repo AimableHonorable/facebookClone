@@ -9,13 +9,13 @@
   </p>
 
     <% @posts.each do |post| %>
-      <div class="p-3 mb-2 bg-white text-dark">
+      <div class="p-3 mb-2 bg-white text-dark border"">
       <p>
       <strong><%= post.user.first_name %> <%= post.user.last_name %><strong>
       </p>
 
       <p>
-      <%= post.texts %>
+      <small><%= post.texts %></small>
       </p>
 
       <p>
