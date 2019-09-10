@@ -11,11 +11,10 @@
     </div>
   <% end %>
   <div class="newpost">
-    
     <div class="field">
       <h4>What is on your mind?</h4>
       <%= form.text_area :texts, class:"form-control" %>
-    </div>
+    </div><br>
 
     <div class="field">
       <%= form.label :Add_photo %>
@@ -25,7 +24,7 @@
     </div>
 
     <div class="actions">
-      <%= form.submit %>
+      <%= form.submit class:"btn-success" %>
     </div>
   <% end %>
 </div>
