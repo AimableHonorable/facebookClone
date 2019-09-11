@@ -17,7 +17,7 @@
     </div><br>
 
     <div class="field">
-      <%= form.label :Add_photo %>
+      <%= form.label :Add_photo %>      
       <%= image_tag(@post.images.url) if @post.images && @post.images.url %>
       <%= form.file_field :images %>
       <%= form.hidden_field :images_cache %>
