@@ -1,0 +1,15 @@
+<div class="super">
+  <h3 class="text-center">Find friends</h3>
+  <% @users.each do |user| %>
+    
+    <% if user.id != current_user.id %>
+    
+      <div class="item">
+        <%= link_to user.first_name, user %>
+        <%= link_to 'message', conversations_path(sender_id: current_user.id, recipient_id: user.id), method: :post %>
+      </div>
+    
+    <%= render 'follow_form', user: user %>
+     <% end %>
+  <% end %>
+</div>

@@ -10,29 +10,29 @@
 
     <% @posts.each do |post| %>
       <div class="p-3 mb-2 bg-white text-dark border"">
-      <p>
-      <strong><%= post.user.first_name %> <%= post.user.last_name %><strong>
-      </p>
+        <p>
+        <strong><%= post.user.first_name %> <%= post.user.last_name %><strong>
+        </p>
 
-      <p>
-      <small><%= post.texts %></small>
-      </p>
+        <p>
+        <small><%= post.texts %></small>
+        </p>
 
-      <p>
-      <% if post.images.url %>
-      <%= image_tag post.images.url %>
-      <% end %>
-      </p>
-
-      <p>
-      <a><%= link_to 'Show', post %></a>
-      <% if logged_in? %>
-        <% if current_user.id == post.user_id %>
-          <a><%= link_to 'Edit', edit_post_path(post) %></a>
-          <a><%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' } %></a>
+        <p>
+        <% if post.images.url %>
+        <%= image_tag post.images.url %>
         <% end %>
-      <% end %>
-      </p>
+        </p>
+
+        <p>
+        <a><%= link_to 'Show', post %></a>
+        <% if logged_in? %>
+          <% if current_user.id == post.user_id %>
+            <a><%= link_to 'Edit', edit_post_path(post) %></a>
+            <a><%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' } %></a>
+          <% end %>
+        <% end %>
+        </p>
       </div>
     <% end %>
   </div>

@@ -1,3 +1,23 @@
 <h1><%= @user.first_name %> <%= @user.last_name %></h1>
 
 <p>email address: <%= @user.email %></p>
+
+
+  
+<% if logged_in? %>
+  <h4>following</h4>
+  <%= @relationships.each do |relationship| %>
+    <% if current_user.id == relationship.follower_id %>
+      <%= relationship.followed.first_name%>
+    <% end %>
+  <% end %>
+  <h4>followers</h4>
+  <%= @relationships.each do |relationship| %>
+    <% if current_user.id == relationship.followed_id %>
+      <%= relationship.follower.first_name%>
+    <% end %>
+  <% end %>
+<% end %>
+
+
+
